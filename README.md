@@ -1,37 +1,48 @@
-# parser
+# Ascend CANN Parser
 
-#### 介绍
-用于昇腾NPU硬件条件下，解析神经网络结构
+Ascend CANN Parser（简称parser）配合TF_Adapter、 ATC工具、IR构图等使用，开发者通过以上工具，借助parser能方便地将第三方框架的算法表示转换成Ascend IR，充分利用昇腾AI处理器卓越的运算能力。
+![parser系统框架](https://images.gitee.com/uploads/images/2020/1015/151426_71a73e7e_7876749.png "parser系统框架.PNG")
 
-#### 软件架构
-软件架构说明
+## 安装
 
+parser以动态库的方式被调用。
 
-#### 安装教程
+### 源码安装
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+parser支持源码编译，进行源码编译前，首先确保你有昇腾910AI处理器的环境，同时确保系统满足以下要求：
 
-#### 使用说明
+- GCC >= 7.3.0
+- CMake >= 3.14.0
+- Autoconf >= 2.64
+- Libtool >= 2.4.6
+- Automake >= 1.15.1
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 下载源码
 
-#### 参与贡献
+```
+git clone --recursive 
+https://gitee.com/ascend/parser.git -b development
+cd parser
+chmod +x build.sh
+```
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+#### 源码编译
 
+在parser根目录执行以下命令编译：
+```
+bash build.sh
 
-#### 特技
+编译完成之后，相应的动态库文件会生成在output文件夹中
+```
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+## 贡献
+
+欢迎参与贡献。
+
+## Release Notes
+
+Release Notes请参考[RELEASE](RELEASE.md)。
+
+## 许可证
+
+[Apache License 2.0](LICENSE)
